@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+##one:
+##  img: MyString
+##  lang: MyString
+##  user: one
+
+##two:
+##  img: MyString
+##  lang: MyString
+##  user: two
+
+meme1:
+  lang: de
+  user: user1
+  tags: tag1, tag2
+
+meme2:
+  lang: en
+  user: user1
+  tags: tag1, tag3

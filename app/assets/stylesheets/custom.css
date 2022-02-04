@@ -1,0 +1,247 @@
+body {
+  background-image: url('/images/bg-main-1.png');
+}
+
+
+/* * *  Helpers (general)  * * */
+.mt-6 {
+  margin-top: 5rem;
+}
+.pt-es-1 {
+  padding-top: 0.2rem;
+}
+.color-pink {
+  color: #f76868;
+}
+.color-light-blue {
+  color: #6cd3ff;
+}
+.color-white {
+  color: #fff;
+}
+.bg-light-blue {
+  background-color: #d9f5ff;
+}
+.bg-blue {
+  background-color: #6cd3ff !important;
+}
+.bg-light-gray {
+  background-color: #f9f7f7
+}
+.rounded-5 {
+  border-radius: 0.5rem;
+}
+.blur-filter {
+  filter: blur(0.5rem);
+}
+.z-inx-9 {
+  z-index: 9;
+}
+
+
+/* * *  Menu (Navbar top)  * * */
+@media only screen and (min-width: 1000px) {
+  .offcanvas-body .navbar-nav {
+    align-items: center;
+  }
+  .account-dropdown-menu {
+    display: block;
+  }
+  .add-meme-btn-mobile-div,
+  .account-mobile-menu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .account-dropdown-menu {
+    display: none;
+  }
+  .sign-in-btn,
+  .sign-up-btn,
+  .account-mobile-menu {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+}
+.offcanvas-end {
+  width: 220px !important;
+}
+.modal-login-title {
+  font-weight: 300;
+}
+#lang-selector img {
+  height: 25px;
+}
+.add-meme-btn-mobile-div {
+  bottom: 4rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+
+/* * *  Modal: Sign In  * * * */
+.sign-in-error {
+  color: red;
+  font-size: 0.8rem;
+  display: none;
+}
+
+
+/* * *  Modal: Sign Up  * * * */
+.sign-up-error-name,
+.sign-up-error-email {
+  color: red;
+  font-size: 0.8rem;
+  display: none;
+}
+
+
+/* * *  Main part (memes)  * * */
+@media only screen and (min-width: 1000px) {
+  #row-memes-main {
+    --bs-gutter-x: 3rem;
+  }
+  #main-part-memes {
+    background-color: #ebf9ff;
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #main-part-memes {
+    margin-top: 6rem;
+    background-color: #ecf5f9;
+  }
+  #main-part-memes-title {
+    margin-bottom: 2rem !important;
+  }
+}
+.user-name a,
+.tags a {
+  color: #347dea !important;
+}
+.bg-main-meme {
+  background-color: #fdfdfd;
+}
+.filter a {
+  color: #4c4c4c;
+}
+.filter a:hover {
+  color: #000000;
+}
+.filter .selected {
+  background-color: #959595;
+  color: white;
+}
+.meme-more .more-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: white;
+}
+
+
+/* * *   Comments  * * * * * */
+.all-comments-modal {
+  height: 370px;
+}
+.comment-date {
+  font-size: 0.7rem;
+  padding-top: 0.4rem;
+  color: gray;
+}
+@media only screen and (min-width: 1000px) {
+  .write-new-comment-col {
+    padding-right: 3rem!important;
+    padding-left:  3rem!important;
+  }
+}
+.comment-more .more-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #d9f5ff;
+}
+@media only screen and (min-width: 1000px) {
+  .add-remove-like-comment {
+    padding-left: 1.5rem !important;
+  }
+}
+
+
+/* * *  Statistic  * * * * * */
+.statistic-best-memes {
+  display: block !important;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.statistic-best-memes .col-md-4 {
+  display: inline-block;
+}
+.statistic-best-memes .col-md-4 > .row {
+  background-color: #f2f2f2b3;
+}
+.statistic-best-memes .meme-more button {
+  background-color: #f2f2f2b3;
+}
+.statistic-sub-title {
+  background-color: #6290a2;
+  padding: 0 2rem;
+  color: white;
+}
+.statistic-achievement .col-md-4 i {
+  font-size: 5rem;
+  color: #f0f0f0;
+}
+.statistic-best-memes .col-md-4 {
+  margin-right: 0.6rem;
+}
+.bronze {
+  color: #bf8970 !important;
+}
+.silver {
+  color: #C0C0C0 !important;
+}
+.gold {
+  color: #e4c107 !important;
+}
+
+
+/* * *  Pagination  * * * * * */
+.page-item a {
+  background-color: #d9f5ff;
+  color: #6b797e;
+}
+
+.page-numbers a {
+  background-color: #ffffff;
+  color: #6b797e;
+}
+
+.page-numbers a.active {
+  background-color: #d9f5ff;
+  color: #6b797e;
+}
+
+
+/* * *  Footer (index)  * * * */
+#footer .row {
+  background-image: linear-gradient(to right, #626262, #707070);
+  height: 130px;
+}
+#footer .col-12 {
+  color: white;
+}
+
+
+/* * *  Footer (index)  * * * */
+.admin-header {
+  background-color: #6785a0;
+}
+.admin-header a,
+.admin-header a:hover,
+.admin-header a:visited {
+  color: white;
+}

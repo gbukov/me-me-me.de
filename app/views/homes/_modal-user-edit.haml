@@ -1,0 +1,66 @@
+#editUserModal.modal.fade{"aria-hidden" => "true",
+                        "aria-labelledby" => "editUserModalLabel",
+                        :tabindex => "-1"}
+  .modal-dialog.modal-dialog-centered.modal-fullscreen-sm-down
+    .modal-content
+      .container
+        .row
+          .col-12.d-flex.justify-content-end.mt-3
+            %button.btn-close{"aria-label" => "Close",
+                              "data-bs-dismiss" => "modal",
+                              :type => "button"}
+          .col-12.d-flex.justify-content-center.mb-4
+            %h3.fw-light
+              = t('pages.index.edit_user.title')
+          .col-12.px-5
+            = form_with model: resource, url: registration_path(resource), html: { method: :put } do |f|
+              .mb-3
+                = f.text_field :username,
+                               required: true,
+                               placeholder: t('pages.index.edit_user.name'),
+                               autocomplete: "username",
+                               class: "form-control",
+                               id: "editName"
+              .mb-3
+                = f.email_field :email,
+                                required: true,
+                                placeholder: t('pages.index.edit_user.email'),
+                                autocomplete: "email",
+                                class: "form-control",
+                                id: "editEmail"
+              .mb-3
+                = f.password_field :password,
+                                   required: true,
+                                   placeholder: t('pages.index.edit_user.pass'),
+                                   minlength: 6,
+                                   autocomplete: "new-password",
+                                   class: "form-control",
+                                   id: "editPassword"
+              .mb-3
+                = f.password_field :password_confirmation,
+                                   required: true,
+                                   placeholder: t('pages.index.edit_user.pass_c'),
+                                   minlength: 6,
+                                   autocomplete: "new-password",
+                                   class: "form-control",
+                                   id: "editConfirmPassword"
+              .mb-3
+                = f.password_field :current_password,
+                                   required: true,
+                                   placeholder: t('pages.index.edit_user.curr_pass'),
+                                   minlength: 6,
+                                   autocomplete: "current-password",
+                                   class: "form-control",
+                                   id: "editOldPassword"
+              = f.submit t('pages.index.edit_user.update_btn'), class: "btn btn-primary w-100 rounded-pill"
+          .col-12.mt-3
+            %hr.w-100/
+          .col-12.d-flex.justify-content-center.mt-1
+            %span
+              = t('pages.index.edit_user.rem_acc')
+          .col-12.d-flex.justify-content-center.mb-4.mt-1.px-5
+            = link_to t('pages.index.edit_user.rem_acc_btn'),
+                      registration_path(User.new),
+                      data: { confirm: "Are you sure?" },
+                      method: :delete,
+                      class: "btn btn-danger w-100 rounded-pill"

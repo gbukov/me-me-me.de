@@ -1,0 +1,33 @@
+= javascript_pack_tag 'index.js'
+
+.lang{'current-lang' => I18n.locale}
+
+-# Navbar
+= render 'navbar'
+-#Errors
+-#= render 'errors'
+-# Main part
+#main-part-memes.container-md.mt-6
+  -# Title and filters
+  = render 'main-part-title-filters'
+
+  -# Memes
+  #row-memes-main.row.gy-4
+    - @memes.each do |meme|
+      = render 'main-part-meme', meme: meme
+
+-# Pagination
+= render 'pagination'
+
+-# Footer
+= render 'footer'
+
+-# Modal windows
+= render 'modal-sign-in'
+= render 'modal-sign-up'
+= render 'modal-reset-password'
+= render 'modal-user-edit'
+= render 'modal-add-meme'
+= render 'modal-comments'
+= render 'modal-report-meme'
+= render 'modal-statistic'

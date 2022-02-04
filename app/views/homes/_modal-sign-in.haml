@@ -1,0 +1,47 @@
+#loginModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "loginModalLabel", :tabindex => "-1"}
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .container
+        .row
+          .col-12.d-flex.justify-content-end.mt-3
+            %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "modal", :type => "button"}
+          .col-12.d-flex.justify-content-center.mb-4
+            %h3.fw-light
+              = t('pages.index.sign_in.title')
+          .col-12.px-5
+            = form_with model: resource, url: user_session_path, class: "sign-in-form" do |f|
+              .mb-3
+                = f.email_field :email,
+                                required: true,
+                                placeholder: t('pages.index.sign_in.email'),
+                                class: "form-control",
+                                id: "signInEmail"
+                %span.sign-in-error
+                  = t('pages.index.sign_in.error')
+              .mb-3
+                = f.password_field :password,
+                                   required: true,
+                                   placeholder: t('pages.index.sign_in.pass'),
+                                   minlength: 6,
+                                   class: "form-control",
+                                   id: "signInPassword"
+                %span.sign-in-error
+                  = t('pages.index.sign_in.error')
+              = f.submit t('pages.index.sign_in.sign_btn'), class: "btn btn-primary w-100 rounded-pill"
+          .col-12.mt-3
+            %hr.w-100/
+          .col-12.d-flex.justify-content-center.mb-1.mt-1
+            %span
+              = t('pages.index.sign_in.ref_signup')
+              = link_to t('pages.index.sign_up.title'),
+                        '#',
+                        "data-bs-dismiss" => "#loginModal",
+                        "data-bs-target" => "#signupModal",
+                        "data-bs-toggle" => "modal"
+          .col-12.d-flex.justify-content-center.mb-4.mt-1
+            %span
+              = link_to t('pages.index.sign_in.ref_pasres'),
+                        '#',
+                        "data-bs-dismiss" => "#loginModal",
+                        "data-bs-target" => "#resetPasswordModal",
+                        "data-bs-toggle" => "modal"

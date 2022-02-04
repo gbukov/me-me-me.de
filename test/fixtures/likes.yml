@@ -1,0 +1,24 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+##one:
+##  user: one
+
+##two:
+##  user: two
+
+
+like1:
+  user: user1
+  likeable: meme1 (Meme)
+
+like2:
+  user: user2
+  likeable: meme1 (Meme)
+
+like3:
+  user: user1
+  likeable: comment1 (Comment)
+
+like4:
+  user: user2
+  likeable: comment1 (Comment)

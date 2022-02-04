@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+##one:
+##  user: one
+##  reason: 1
+##  open: false
+
+##two:
+##  user: two
+##  reason: 1
+##  open: false
+
+report1:
+  user: user1
+  reportable: meme1 (Meme)
+  reason: 1
+  open: false
+
+report2:
+  user: user2
+  reportable: meme1 (Meme)
+  reason: 2
+  open: true
+
+report3:
+  user: user1
+  reportable: comment1 (Comment)
+  reason: 2
+  open: true
+
+report4:
+  user: user2
+  reportable: comment1 (Comment)
+  reason: 2
+  open: true
