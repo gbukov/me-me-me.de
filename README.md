@@ -1,24 +1,12 @@
-# README
+**Hello! I'm glad to introduce you our final project at *Web Engineering*:**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![we-ap-ws2122-1](readme-imgs/1.jpeg "pic1")
 
-Things you may want to cover:
+![we-ap-ws2122-2](readme-imgs/2.jpeg "pic2")
 
-* Ruby version
+![we-ap-ws2122-3](readme-imgs/3.jpeg "pic3")
 
-* System dependencies
+![we-ap-ws2122-4](readme-imgs/4.jpeg "pic4")
 
-* Configuration
+![we-ap-ws2122-5](readme-imgs/5.jpeg "pic5")
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
